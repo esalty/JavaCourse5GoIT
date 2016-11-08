@@ -6,109 +6,139 @@ import java.util.Arrays;
  * Created by GodMod on 11/7/2016.
  */
 public class SimpleCalcIntDouble {
-    public static void main(String[] args) {
-    int [] arrayOfInt =  {9,2,-5,3,4,5,6,7,10,8};
-    double [] arrayOfDoubles = {0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0};
-        System.out.println("All elements summary  of integer array" +" "+ sum(arrayOfInt) );
-        System.out.println("Minimal element of integer array " +" "+ min(arrayOfInt) );
-        System.out.println("Maximum element of integer array " +" "+ max(arrayOfInt) );
-        System.out.println("Maximum positive element of integer array " +" "+ maxPositive(arrayOfInt) );
-        System.out.println("All elements multiplication of integer array"+" "+ multiplication(arrayOfInt));
-        System.out.println("Modulus of first and last elements of integer array"+" "+ modulus(arrayOfInt));
-        System.out.println("Second Largest element"+" "+ secondLargest(arrayOfInt));
-    }
 
     static int sum(int array[]) {
         int summary = 0;
-         for (int i=0; i < array.length; i++) {
-             summary += array[i];
-         }
+        for (int i = 0; i < array.length; i++) {
+            summary += array[i];
+        }
         return summary;
 
     }
 
-    static  int min(int array[]){
-        int minimalElement =array[0];;
-        for (int i=0; i<array.length;i++) {
+    static int min(int array[]) {
+        int minimalElement = array[0];
+        for (int i = 0; i < array.length; i++) {
 
-            if (minimalElement>array[i])
-            {
-                minimalElement=array[i];
+            if (minimalElement > array[i]) {
+                minimalElement = array[i];
             }
         }
         return minimalElement;
     }
-    static int max(int array[]){
 
-        int maximumElement =array[0];;
-        for (int i=0; i<array.length;i++) {
+    static int max(int array[]) {
 
-            if (maximumElement<array[i])
-            {
-                maximumElement=array[i];
+        int maximumElement = array[0];
+        for (int i = 0; i < array.length; i++) {
+
+            if (maximumElement < array[i]) {
+                maximumElement = array[i];
             }
         }
         return maximumElement;
+    }
 
+    static int maxPositive(int array[]) {
+        int maximumPositive = 0;
+        for (int i = 0; i < array.length; i++) {
 
-        }
-    static int maxPositive(int array[]){
-        int maximumPositive=0;
-        for (int i=0; i<array.length;i++) {
-
-            if ((array[i]>0) && (maximumPositive<array[i])) {
-                maximumPositive=array[i];
+            if ((array[i] > 0) && (maximumPositive < array[i])) {
+                maximumPositive = array[i];
             }
         }
         return maximumPositive;
-            }
+    }
 
-    static int multiplication(int array[]){
-        int multiplication=1;
-        for (int number:array) {
-            multiplication*=number;
+    static int multiplication(int array[]) {
+        int multiplication = 1;
+        for (int number : array) {
+            multiplication *= number;
         }
         return multiplication;
-            }
-    static int modulus(int array[]){
+    }
 
-        int modulusFirstLast=0;
-        int first=array[0];
-        int last =array[array.length-1];
-        if (last!=0) {
-            modulusFirstLast=first/last;
-            return modulusFirstLast;
+    static void modulus(int array[]) {
+        int modulusFirstLast = 0;
+        int first = array[0];
+        int last = array[array.length - 1];
+        if (last != 0) {
+            modulusFirstLast = first / last;
+            System.out.println("Modulus of first and last elements of integers array" +" "+ modulusFirstLast);
+        } else {
+            System.out.println("Divizion by zero");
         }
-        return 0;
-            }
+    }
+
     static int secondLargest(int array[]) {
         Arrays.sort(array);
+        return array[array.length - 2];
+    }
 
+    static double sum(double array[]) {
+        double summary = 0;
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]+" ");
-                    }
-                    return array[array.length-2];
+            summary += array[i];
+        }
+        return summary;
     }
-    static double sum(double array[]){
-        return 1;
+
+
+    static double min(double array[]) {
+        double minimalElement = array[0];
+        for (int i = 0; i < array.length; i++) {
+
+            if (minimalElement > array[i]) {
+                minimalElement = array[i];
+            }
+        }
+        return minimalElement;
     }
-    static double min(double array[]){
-        return 1;
+
+    static double max(double array[]) {
+        double maximumElement = array[0];
+        ;
+        for (int i = 0; i < array.length; i++) {
+
+            if (maximumElement < array[i]) {
+                maximumElement = array[i];
+            }
+        }
+        return maximumElement;
     }
-    static double max(double arrayOfDoubles[]){
-        return 1;
+
+    static double maxPositive(double array[]) {
+        double maximumPositive = 0;
+        for (int i = 0; i < array.length; i++) {
+            if ((array[i] > 0) && (maximumPositive < array[i])) {
+                maximumPositive = array[i];
+            }
+        }
+        return maximumPositive;
     }
-    static double maxPositive(double arrayOfDoubles[]){
-        return 1;
+
+    static double multiplication(double array[]) {
+        double multiplication = 1;
+        for (double number : array) {
+            multiplication *= number;
+        }
+        return multiplication;
     }
-    static double multiplication(double arrayOfDoubles[]){
-        return 1;
-    }
-    static double modulus(double arrayOfDoubles[]){
-        return 1;
-    }
-    static double secondLargest(double arrayOfDoubles[]){
-        return 1;
+
+    static void modulus(double array[]) {
+        double modulusFirstLast = 0;
+        double first = array[0];
+        double last = array[array.length - 1];
+        if (last != 0) {
+            modulusFirstLast = first / last;
+            System.out.println("Modulus of first and last elements of integers array"+" "+modulusFirstLast);
+        }
+        else System.out.println("Division by zero");
+            }
+
+    static double secondLargest(double array[]) {
+        Arrays.sort(array);
+        return array[array.length - 2];
     }
 }
 
