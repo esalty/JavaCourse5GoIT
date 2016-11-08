@@ -39,15 +39,17 @@ public class SimpleCalcIntDouble {
         return maximumElement;
     }
 
-    static int maxPositive(int array[]) {
+    static void maxPositive(int array[]) {
         int maximumPositive = 0;
         for (int i = 0; i < array.length; i++) {
-
             if ((array[i] > 0) && (maximumPositive < array[i])) {
                 maximumPositive = array[i];
             }
         }
-        return maximumPositive;
+       if (maximumPositive==0){
+           System.out.println("We haven't any positive number in array");
+       } else System.out.println("Maximum positive element of integers array"+" "+maximumPositive);
+
     }
 
     static int multiplication(int array[]) {
@@ -66,7 +68,7 @@ public class SimpleCalcIntDouble {
             modulusFirstLast = first / last;
             System.out.println("Modulus of first and last elements of integers array" +" "+ modulusFirstLast);
         } else {
-            System.out.println("Divizion by zero");
+            System.out.println("Division by zero");
         }
     }
 
@@ -107,14 +109,17 @@ public class SimpleCalcIntDouble {
         return maximumElement;
     }
 
-    static double maxPositive(double array[]) {
+    static void maxPositive(double array[]) {
         double maximumPositive = 0;
         for (int i = 0; i < array.length; i++) {
             if ((array[i] > 0) && (maximumPositive < array[i])) {
                 maximumPositive = array[i];
             }
         }
-        return maximumPositive;
+        if (maximumPositive==0){
+            System.out.println("We haven't any positive number in array");
+        } else System.out.println("Maximum positive element of doubles array"+" "+maximumPositive);
+
     }
 
     static double multiplication(double array[]) {
