@@ -5,6 +5,11 @@ package module3;
  */
 public class TestModule3 {
     public static void main(String[] args) {
-        System.out.println("Egegey :)");
+        Bird jackBird = new Bird();
+        jackBird.doWalking();
+        jackBird.doFlying();
+        jackBird.Sing();
+        jackBird.doAssertion();
+
     }
 }
