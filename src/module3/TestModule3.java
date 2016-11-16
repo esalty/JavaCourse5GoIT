@@ -11,5 +11,14 @@ public class TestModule3 {
         jackBird.Sing();
         jackBird.doAssertion();
 
+        Arithmetic ar = new Arithmetic();
+
+        System.out.println(ar.add(25, -17));
+
+        Adder ad = new Adder();
+
+        System.out.println(ad.check(23456, -123213123));
     }
+
+
 }
