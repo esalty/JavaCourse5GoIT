@@ -16,7 +16,7 @@ public class Bird {
         System.out.println("I am flying");
     }
 
-     void Sing() {
+     void sing() {
         System.out.println("I am singing");
     }
 
