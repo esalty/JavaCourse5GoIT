@@ -24,5 +24,27 @@ public class Main {
         System.out.println(euBankUser2);
         System.out.println(chinaBankUser1);
         System.out.println(chinaBankUser2);
+        BankSystemImpl bank= new BankSystemImpl();
+        bank.withdrawOfUser(chinaBankUser1,50);
+        bank.fundUser(usBankUser1,1005);
+        bank.paySalary(euBankUser1);
+        bank.transferMoney(usBankUser1,euBankUser1, 500);
+        bank.withdrawOfUser(usBankUser2,10000);
+        bank.fundUser(usBankUser1,5000);
+        bank.paySalary(euBankUser1);
+        bank.transferMoney(chinaBankUser1,euBankUser1, 5000000);
+        bank.withdrawOfUser(chinaBankUser2,10000);
+        bank.fundUser(euBankUser2,6000);
+        bank.paySalary(euBankUser2);
+        bank.transferMoney(euBankUser1,chinaBankUser2, -300);
+
+        System.out.println("///////////////////////////////////////////////");
+        System.out.println(usBankUser1);
+        System.out.println(usBankUser2);
+        System.out.println(euBankUser1);
+        System.out.println(euBankUser2);
+        System.out.println(chinaBankUser1);
+        System.out.println(chinaBankUser2);
+
     }
 }
