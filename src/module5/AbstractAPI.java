@@ -3,7 +3,7 @@ package module5;
 /**
  * Created by GodMod on 12/1/2016.
  */
-public class AbstractAPI {
+public class AbstractAPI implements API {
     public Room[] rooms;
 
 
