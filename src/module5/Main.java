@@ -8,11 +8,11 @@ public class Main {
         Room[] result;
         System.out.println("Search room:");
         Controller control = new Controller();
-        result = control.requstRooms(150, 2, "Kyiv", "Hilton");
+        result = control.requstRooms(150, 2, "Kyiv", "Kozackiy");
         System.out.println(Arrays.toString(result));
-        result = control.requstRooms(400, 2, "Kyiv", "Hyatt");
+        result = control.requstRooms(400, 2, "Kyiv", "Palace");
         System.out.println(Arrays.toString(result));
-        result = control.requstRooms(500, 1, "Kyiv", "Hyatt");
+        result = control.requstRooms(500, 1, "Kyiv", "Palace");
         System.out.println(Arrays.toString(result));
 
 
