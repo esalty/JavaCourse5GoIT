@@ -27,6 +27,27 @@ public class Main {
         System.out.println(Arrays.toString(arrayOfInt));
         System.out.println("Reverse array of int" + " " + Arrays.toString(ArraysUtils.reverse(arrayOfInt)));
         System.out.println("Even elements of int array " + " " + Arrays.toString(ArraysUtils.findEvenElements(arrayOfInt)));
+
+        User[] users = {
+                new User(1, "Roma", "Gercen", 1200, 1000),
+                new User(1, "Oleg", "Krepish", 1200, 1000),
+                new User(7657567, "Ivan", "Klym", 900, 100),
+                new User(567567, "Petro", "Sivach", 1000, 700),
+                new User(2, "Ura", "Ura", 200, 1300),
+                new User(34234, "Tony", "Prot", 1000, 1000),
+                new User(2, "Shura", "Mushik", 200, 1300),
+                new User(2, "Roma", "Gercen", 200, 1300),
+        };
+
+        System.out.println("Users' IDs:\n" + Arrays.toString(UserUtils.getUsersId(users)));
+        User[] uniqueUsers = UserUtils.uniqueUsers(users);
+        System.out.println("Unique users:\n" + Arrays.toString(uniqueUsers));
+        System.out.println("Users with balance of 1000:\n"
+                + Arrays.toString(UserUtils.usersWithConditionalBalance(uniqueUsers, 1300)));
+        System.out.println("Paying salaries...\n" + Arrays.toString(UserUtils.paySalaryToUsers(uniqueUsers)));
+
+
+
     }
 
 }
