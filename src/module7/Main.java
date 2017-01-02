@@ -1,7 +1,6 @@
 package module7;
 
 import java.util.*;
-import java.util.Currency;
 
 
 public class Main {
