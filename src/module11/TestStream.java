@@ -5,6 +5,6 @@ package module11;
  */
 public class TestStream {
     public static void main(String[] args) {
-        System.out.println("Test");
+        System.out.println("Test ");
     }
 }
