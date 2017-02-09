@@ -5,6 +5,15 @@ package module10;
  */
 public class TestException {
     public static void main(String[] args) {
-        System.out.println("Test");
+        try {
+            throw new Exception("ololo");
+            //System.out.println("Test");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("EGEGgey");
+
+
+
     }
 }
