@@ -6,7 +6,7 @@ import com.sun.org.apache.xpath.internal.SourceTree;
  * Created by GodMod on 2/3/2017.
  */
 public class TestException {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MyException, OurException {
         try {
             throw new Exception("ololo");
             //System.out.println("Test");
@@ -31,5 +31,12 @@ public class TestException {
             System.out.println("We catch null pointer exception");
         }
         System.out.println(testEx);
+
+
+       ClassWithFndG cls= new ClassWithFndG();
+        cls.f();
+
+
     }
+
 }
