@@ -1,5 +1,7 @@
 package module10;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 /**
  * Created by GodMod on 2/3/2017.
  */
@@ -20,7 +22,14 @@ public class TestException {
             System.out.println(e.getMassegeException());
 
         }
-        System.out.println("After catch MyException");
 
+        System.out.println("After catch MyException");
+        Object testEx = null;
+        try {
+            testEx.hashCode();
+        } catch (NullPointerException e) {
+            System.out.println("We catch null pointer exception");
+        }
+        System.out.println(testEx);
     }
 }
