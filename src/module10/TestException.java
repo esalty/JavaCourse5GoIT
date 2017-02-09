@@ -8,12 +8,19 @@ public class TestException {
         try {
             throw new Exception("ololo");
             //System.out.println("Test");
+
         } catch (Exception e) {
             System.out.println(e);
         }
-        System.out.println("EGEGgey");
+        System.out.println("EGEG");
 
+        try {
+            throw new MyException("Ouou");
+        } catch (MyException e) {
+            System.out.println(e.getMassegeException());
 
+        }
+        System.out.println("After catch MyException");
 
     }
 }
